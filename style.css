@@ -1,0 +1,81 @@
+/* Estilos para el encabezado */
+.header-principal {
+    height: 100vh; /* Altura completa de la ventana */
+    background: url('satatic/hab5.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+/* Capa de superposición para oscurecer la imagen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro semi-transparente */
+    z-index: 1;
+}
+
+/* Asegura que el contenido del header esté por encima del overlay */
+.header-principal .container {
+    z-index: 2;
+    position: relative;
+}
+
+/* Estilos para el título y subtítulo */
+.header-principal h1 {
+    font-weight: bold;
+}
+
+.header-principal .lead {
+    font-size: 1.5rem;
+}
+
+/* Estilos para el carrusel */
+.carousel-inner img {
+    height: 600px; /* Altura fija para todas las imágenes del carrusel */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilos generales */
+body {
+    font-family: sans-serif;
+}
+
+/* Estilos para el botón de WhatsApp flotante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366; /* Color oficial de WhatsApp */
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Efecto para que el botón se agrande al pasar el mouse */
+}
+
+/* Opcional: Para pantallas más pequeñas, ajusta el tamaño y la posición */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
